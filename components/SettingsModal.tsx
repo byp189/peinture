@@ -90,7 +90,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose, l
                             />
                         </div>
                         <p className="mt-2 text-xs text-white/40 leading-relaxed">
-                            {t.hfTokenHelp} <a className="text-purple-600 hover:text-purple-400 underline decoration-purple-600/30" href="https://huggingface.co/settings/tokens" target="_blank">{t.hfTokenLink}</a> {t.hfTokenHelpEnd}
+                            {t.hfTokenHelp} <a className="text-purple-600 hover:text-purple-400 underline decoration-purple-600/30" href="https://openai.com" target="_blank">{t.hfTokenLink}</a> {t.hfTokenHelpEnd}
                         </p>
                     </div>
                 </div>
