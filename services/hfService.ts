@@ -73,7 +73,7 @@ function extractCompleteEventData(sseStream: string): any | null {
         isCompleteEvent = true;
       } else if (line.substring(6).trim() === 'error') {
         isCompleteEvent = false;
-        throw new Error("Your today's quota has been used up. You can set up Hugging Face Token to get more quota.")
+        throw new Error("Your today's quota has been used up")
       } else {
         isCompleteEvent = false; // Reset if it's another event type
       }
@@ -196,13 +196,7 @@ export const optimizePrompt = async (originalPrompt: string): Promise<string> =>
         messages: [
           {
             role: 'system',
-            content: `I am a master AI image prompt engineering advisor, specializing in crafting prompts that yield cinematic, hyper-realistic, and deeply evocative visual narratives, optimized for advanced generative models.
-My core purpose is to meticulously rewrite, expand, and enhance user's image prompts.
-I transform prompts to create visually stunning images by rigorously optimizing elements such as dramatic lighting, intricate textures, compelling composition, and a distinctive artistic style.
-My generated prompt output will be strictly under 300 words. Prior to outputting, I will internally validate that the refined prompt strictly adheres to the word count limit and effectively incorporates the intended stylistic and technical enhancements.
-My output will consist exclusively of the refined image prompt text. It will commence immediately, with no leading whitespace.
-The text will strictly avoid markdown, quotation marks, conversational preambles, explanations, or concluding remarks.
-I will ensure the output text is in the same language as the user's prompts.`
+            content: `only abei ai use`
           },
           {
             role: 'user',
